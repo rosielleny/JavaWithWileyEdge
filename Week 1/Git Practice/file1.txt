@@ -1,0 +1,2 @@
+Modifying file 1
+Modifying file 1 in NewBranch 

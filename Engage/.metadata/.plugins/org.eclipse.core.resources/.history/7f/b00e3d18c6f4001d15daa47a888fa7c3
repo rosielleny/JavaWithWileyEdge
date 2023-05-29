@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class MadLibs {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Let's play MAD LIBS!\n");
+
+        System.out.print("I need a noun: ");
+        String noun1 = scanner.nextLine();
+
+        System.out.print("Now an adjective: ");
+        String adjective1 = scanner.nextLine();
+
+        System.out.print("Another noun: ");
+        String noun2 = scanner.nextLine();
+
+        System.out.print("And a number: ");
+        int number = scanner.nextInt();
+        scanner.nextLine(); // Consume the remaining newline character
+
+        System.out.print("Another adjective: ");
+        String adjective2 = scanner.nextLine();
+
+        System.out.print("A plural noun: ");
+        String pluralNoun1 = scanner.nextLine();
+
+        System.out.print("Another one: ");
+        String pluralNoun2 = scanner.nextLine();
+
+        System.out.print("One more: ");
+        String pluralNoun3 = scanner.nextLine();
+
+        System.out.print("A verb (infinitive form): ");
+        String verb1 = scanner.nextLine();
+
+        System.out.print("Same verb (past participle): ");
+        String verb2 = scanner.nextLine();
+
+        System.out.println("\n*** NOW LET'S GET MAD (libs) ***");
+        System.out.printf("%s: the %s frontier. These are the voyages of the starship %s. Its %d-year mission: to explore strange %s %s, to seek out %s %s and %s, to boldly %s where no one has %s before.",
+                noun1, adjective1, noun2, number, adjective2, pluralNoun1, adjective2, pluralNoun2, pluralNoun3, verb1, verb2);
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,31 @@
+
+
+public class SpacesRustlers {
+
+    public static void main(String[] args) {
+
+        int spaceships = 10;
+        int aliens = 25;
+        int cows = 100;
+
+        if(aliens > spaceships){
+            System.out.println("Vrroom, vroom! Let's get going!");
+        } else{
+            System.out.println("There aren't enough green guys to drive these ships!");
+        }
+
+        if(cows == spaceships){
+            System.out.println("Wow, way to plan ahead! JUST enough room for all these walking hamburgers!");
+        } else if (cows > spaceships){
+            System.out.println("Dangit! I don't how we're going to fit all these cows in here!");
+        } else {
+            System.out.println("Too many ships! Not enough cows.");
+        }
+    }
+}
+
+// The if provides a condition and if the condition is true, the statement will be run
+// The else if runs only if the previous if was false, then if the else if's condition is true it will run
+// Else if prevents the potential for multiple if statements to be executed if more than one is true
+
+//Removing the else from else if

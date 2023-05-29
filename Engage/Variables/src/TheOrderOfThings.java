@@ -1,0 +1,40 @@
+public class TheOrderOfThings {
+
+    public static void main(String[] args) {
+
+        double number;
+        String opinion, size, age, shape, color, origin, material, purpose;
+        String noun;
+
+        number = 5.0;
+        opinion = "nice";
+        size = "wee";
+        age = "young";
+        shape = "round";
+        color = "yellow";
+        origin = "Scottish";
+        material = "iron";
+        purpose = "gardener";
+
+        noun = "dragons";
+
+        
+        System.out.println(number + " " + opinion + " " + size + " " + age + " " + shape
+                 + " " + color + " " + origin + " " + material + " " + purpose + " " + noun);
+        
+        /* What happens if you output the adjectives in a different order than the "official" one? 
+         * Does it sound okay? (Write out printouts using different orders; which one sounds best?)
+         */
+        
+        System.out.println(color + " " + size + " " + shape + " " + material + " " + number
+                + " " + opinion + " " + origin + " " + age + " " + purpose + " " + noun);
+        
+        System.out.println(shape + " " + number + " " + age + " " + opinion + " " + origin
+                + " " + material + " " + size + " " + noun + " " + purpose + " " + color);
+
+        /* The original order sounds best as English as an established hierarchy for the
+         * order of words like these
+         */
+
+    }
+}

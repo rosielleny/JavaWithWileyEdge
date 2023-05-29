@@ -1,0 +1,30 @@
+public class TheOrderOfThings {
+
+    public static void main(String[] args) {
+
+        double number;
+        String opinion, size, age, shape, color, origin, material, purpose;
+        String noun;
+
+        number = 5.0;
+        opinion = "nice";
+        size = "wee";
+        age = "young";
+        shape = "round";
+        color = "yellow";
+        origin = "Scottish";
+        material = "platinum";
+        purpose = "gardener";
+
+        noun = "dragons";
+
+        
+        System.out.println(number + " " + opinion + " " + size + " " + age + " " + shape
+                 + " " + color + " " + origin + " " + material + " " + purpose + " " + noun);
+        
+        System.out.println(color + " " + size + " " + shape + " " + material + " " + number
+                + " " + opinion + " " + origin + " " + age + " " + purpose + " " + noun);
+
+
+    }
+}

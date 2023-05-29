@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class StayPositive {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a positive integer: ");
+        int number = sc.nextInt();
+        
+        System.out.println("Counting down:");
+        while (number >= 0) {
+            System.out.println(number);
+            number--;
+        }
+        
+        System.out.println("Countdown completed!");
+        sc.close();
+    }
+}

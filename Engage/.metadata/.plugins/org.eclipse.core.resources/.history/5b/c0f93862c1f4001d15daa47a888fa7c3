@@ -1,0 +1,42 @@
+
+public class AllAboutMe {
+
+	public static void main(String[] args) {
+		
+		String name = "Rosie";
+		String favouriteFood = "pasta";
+		int pets = 0;
+		String live = "flat";
+		boolean whistle = true;
+		
+		System.out.println("My name is "+name+"."
+				+ "\nMy favourite food is "+food+"."
+				+ "\nI have "+pets+" pets."
+				+ "\nI live in a "+live+"."
+				+ "\nIt is "+whistle+" I know how to whistle.");
+		
+
+	}
+
+}
+
+/*Type your own code into a new class file named AllAboutMe.java.
+Using the example output below, write a program that includes at least five variables.
+Choose an appropriate name and type for each variable.
+    your name
+    your favorite food
+    how many pets you have
+    whether you live in a dorm, an apartment, a house, or something else
+    whether or not you learned to whistle
+Include each piece of data in a sentence on its own line using your variables.
+Include a period at the end of each sentence and ensure that each sentence includes appropriate spaces between the words.
+
+Here is an example of what the output might look like. You are welcome to change the phrasing as well as use your own values, as long as the output meets the criteria listed above.
+What You Should See (Example)
+
+My name is Ada Lovelace.
+My favorite food is hot buttered gnocchi.
+I have 5 pets.
+I live in a pineapple under the sea, and I love it here.
+It is true I know how to whistle.*/
+
