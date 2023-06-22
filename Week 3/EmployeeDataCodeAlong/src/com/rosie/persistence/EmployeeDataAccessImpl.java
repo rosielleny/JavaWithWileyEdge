@@ -12,6 +12,7 @@ import com.rosie.dto.Employee;
 
 public class EmployeeDataAccessImpl implements EmployeeDataAccess {
 
+	
 	@Override
 	public boolean writeRecords(LinkedList<Employee> employees)throws Exception {
 		FileWriter fileWriter=new FileWriter("EmployeesData");
@@ -31,8 +32,8 @@ public class EmployeeDataAccessImpl implements EmployeeDataAccess {
 		return true;
 	}
 
-	@Override
-	public LinkedList<Employee> readRecords()throws Exception {
+	
+	public static LinkedList<Employee> readRecords()throws Exception {
 		LinkedList<Employee> employees=new LinkedList<Employee>();
 		
 		FileReader fileReader = new FileReader("EmployeesData");

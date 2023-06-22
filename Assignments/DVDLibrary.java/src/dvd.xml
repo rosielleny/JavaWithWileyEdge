@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id = "persistence"
+		class= "com.rosie.dvdlib.dataaccess.DataAccessImpl"></bean>
+		
+		<!-- Constructor Injection -->
+	<bean id = "service"
+		class="com.rosie.dvdlib.businesslogic.BusinessLogicImpl">
+		<constructor-arg ref = "persistence"></constructor-arg>
+		</bean>
+	
+	<bean id="userInterface"
+		class="com.rosie.dvdlib.ui.UserInterfaceImpl">
+		<property name = "dvdBusinessLogic" ref="service"></property>
+		</bean>
+		
+</beans>

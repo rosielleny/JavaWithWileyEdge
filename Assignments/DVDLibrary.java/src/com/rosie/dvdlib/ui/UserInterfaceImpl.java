@@ -7,7 +7,11 @@ import com.rosie.dvdlib.dto.*;
 
 public class UserInterfaceImpl implements UserInterface {
 	
-	private BusinessLogicImpl dvdBusinessLogic = new BusinessLogicImpl();
+	private BusinessLogicImpl dvdBusinessLogic; //= new BusinessLogicImpl();
+	
+	public void setDvdBusinessLogic(BusinessLogicImpl dvdBusinessLogic) {
+	    this.dvdBusinessLogic = dvdBusinessLogic;
+	}
 
 	// Method to display a menu from which the user can choose options
 	@Override

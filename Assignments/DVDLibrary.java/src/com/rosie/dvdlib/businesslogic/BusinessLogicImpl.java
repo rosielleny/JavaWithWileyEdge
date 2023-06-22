@@ -9,10 +9,20 @@ import com.rosie.dvdlib.dto.DVD;
  */
 public class BusinessLogicImpl implements BusinessLogic {
 	
-	private DataAccessImpl dataAccess = new DataAccessImpl();
+	private DataAccessImpl dataAccess; //= new DataAccessImpl();
 	private LinkedList<DVD> dvdLibrary;
+	
+	public BusinessLogicImpl(DataAccessImpl dataAccess) {
+		super();
+		this.dataAccess = dataAccess;	
+		 try {
+		        dvdLibrary = dataAccess.readRecords();
+		    } catch (Exception e) {
+		        e.printStackTrace();
+		    }
+	}
 
-	public BusinessLogicImpl() { // Initialises the dvdLibrary by reading records from the data access layer
+	/*public BusinessLogicImpl() { // Initialises the dvdLibrary by reading records from the data access layer
 		
 		try {
 			
@@ -20,7 +30,7 @@ public class BusinessLogicImpl implements BusinessLogic {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 	@Override
 	public LinkedList<DVD> getAllDVDs() {

@@ -1,0 +1,3 @@
+Order Number, Customer Name, State, Tax Rate, Product Type, Area, Cost Per Square Foot, Labor Cost Per Square Foot, Material Cost, Labor Cost, Tax, Total, Delivery Date
+1,Joe Bloggs,TX,4.45,Carpet,187,2.25,2.10,420.75,392.70,36.198525,849.648525,01012024
+2,Party Inc.,WA,9.25,Tile,500,3.50,4.15,1750.00,2075.00,353.812500,4178.812500,11152023

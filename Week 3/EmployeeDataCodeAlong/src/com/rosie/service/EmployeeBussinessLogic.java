@@ -7,7 +7,7 @@ import com.rosie.exception.EmployeeNotFound;
 
 public interface EmployeeBussinessLogic {
 
-	LinkedList<Employee> getAllEmployees();
+	LinkedList<Employee> getAllEmployees() throws Exception;
 	boolean addEmployee(Employee employee);
 	boolean deleteEmployee(int id);
 	public void saveAllEmployees();

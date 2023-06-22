@@ -7,4 +7,4 @@ Mountain Dew,1.25,8
 Fanta,1.49,4
 7UP,1.35,10
 Root Beer,1.15,0
-Ginger Ale,1.39,3
+Ginger Ale,1.39,2

@@ -11,18 +11,27 @@ import com.rosie.persistence.EmployeeDataAccessImpl;
 public class EmployeeBussinessLogicImpl implements EmployeeBussinessLogic {
 
 	
-	private EmployeeDataAccess dataAccess=new EmployeeDataAccessImpl();
+	private EmployeeDataAccess dataAccess;
 	
-	private LinkedList<Employee> employeeList;
 	
-	public EmployeeBussinessLogicImpl() {
+	{
 		try {
-			employeeList=dataAccess.readRecords();
+			employeeList=EmployeeDataAccessImpl.readRecords();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	public EmployeeBussinessLogicImpl(EmployeeDataAccess dataAccess) {
+		super();
+		this.dataAccess = dataAccess;
+		
+	}
+
+	private LinkedList<Employee> employeeList;
+	
+	
 	@Override
 	public LinkedList<Employee> getAllEmployees() {
 		
@@ -43,6 +52,7 @@ public class EmployeeBussinessLogicImpl implements EmployeeBussinessLogic {
 		}
 		return false;
 	}
+	
 	
 	public Employee searchEmployee(int id) throws EmployeeNotFound {
 	    for (Employee employee : employeeList) {

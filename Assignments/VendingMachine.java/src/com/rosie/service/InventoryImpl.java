@@ -17,7 +17,8 @@ public class InventoryImpl implements InventoryInterface {
 		itemList = dao.readRecords();
 		
 	}
-
+	
+	// Returns true or false based on if the item is in stock or not
 	@Override
 	public boolean checkInventory(Item item){
 		
@@ -30,6 +31,7 @@ public class InventoryImpl implements InventoryInterface {
 		}
 	}
 
+	// Removes 1 from the amount of items in Inventory
 	@Override
 	public void reduceInventory(Item item){
 		
@@ -37,6 +39,7 @@ public class InventoryImpl implements InventoryInterface {
 
 	}
 	 
+	
 	@Override
 	public LinkedList<Item> getAllItems(){
 		
@@ -44,7 +47,9 @@ public class InventoryImpl implements InventoryInterface {
 		
 	}
 	
-	
+	// Passes the variables into the audit DAO to write the audit
+	// Writes the Vending Machine Inventory records using itemList
+	// Returns true if this is accomplished
 	@Override
 	public boolean saveRecords(Item chosenItem, BigDecimal money, BigDecimal pennies) throws IOException{
 		 

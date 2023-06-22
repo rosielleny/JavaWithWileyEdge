@@ -1,0 +1,10 @@
+IrnBru,1.99,6
+CocaCola,1.99,3
+Pepsi,1.75,5
+Sprite,1.49,11
+Dr. Pepper,2.25,4
+Mountain Dew,1.25,8
+Fanta,1.49,4
+7UP,1.35,9
+Root Beer,1.15,0
+Ginger Ale,1.39,2

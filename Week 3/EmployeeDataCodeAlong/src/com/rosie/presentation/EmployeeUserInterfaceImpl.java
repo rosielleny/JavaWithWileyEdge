@@ -10,7 +10,11 @@ import com.rosie.service.EmployeeBussinessLogicImpl;
 
 public class EmployeeUserInterfaceImpl implements EmployeeUserInterface {
 
-	private EmployeeBussinessLogic bussinessLogic=new EmployeeBussinessLogicImpl();
+	  private EmployeeBussinessLogic bussinessLogic;
+
+	    public void setBussinessLogic(EmployeeBussinessLogic bussinessLogic) {
+	        this.bussinessLogic = bussinessLogic;
+	    }
 	
 	@Override
 	public void showMenu() {
@@ -27,10 +31,17 @@ public class EmployeeUserInterfaceImpl implements EmployeeUserInterface {
 		Scanner scanner=new Scanner(System.in);
 		switch (choice) {
 		case 1: 
-			LinkedList<Employee> employees=bussinessLogic.getAllEmployees();
-			for(Employee employee:employees) {
-				System.out.println(employee);
+			LinkedList<Employee> employees;
+			try {
+				employees = bussinessLogic.getAllEmployees();
+				for(Employee employee:employees) {
+					System.out.println(employee);}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
+		
+			
 			break;
 		case 2:
 			Employee employee=new Employee();
