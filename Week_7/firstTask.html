@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Number Operations</title>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script>
+            function calculateFactorial(){
+                var number = parseInt($("#numberInput").val());
+                var factorial = 1;
+                for (var i = 1; i <= number; i++){
+                    factorial *=i;
+                }
+                $("#result").text("Factorial: " + factorial);
+            }
+            function checkPalindrome(){
+                var number = $("#numberInput").val();
+                var reversedNumber = number.split('').reverse().join('');
+                if (number === reversedNumber){
+                    $("#result").text(number + " is a palindrome");
+                }
+                else{
+                    $("#result").text(number + " is not a palindrome");
+                }
+            }
+
+            $(document).ready(function(){
+                $("#factorialBtn").click(calculateFactorial);
+                $("#palindromeBtn").click(checkPalindrome);
+            });
+
+        </script>
+        <body>
+            <h1>Number Operations</h1>
+            Enter a number: <input type="number" id = "numberInput"><br><br>
+            <button id = "factorialBtn">Factorial</button>
+            <button id = "palindromeBtn">Palindrome</button><br><br>
+            <div id="result"></div>
+
+        </body>
+    </head>
+</html>
