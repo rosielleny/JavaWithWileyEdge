@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#tabs").tabs();
+        })
+    
+        $(document).ready(function(){
+            $("#searchByTitle").click(function(event){
+                event.preventDefault();
+                var title = $("#dvdTitle").val();
+                $.ajax({
+                    url: 'http://localhost:8082/DVDLibrary/' + encodeURIComponent(title), 
+                    method: 'GET',
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.log('Error:', error); 
+                    }
+                });
+            });
+        
+            $("#getAllDVDs").click(function(event){
+                event.preventDefault();
+                $.ajax({
+                    url: 'http://localhost:8082/DVDLibrary', 
+                    method: 'GET',
+                    success: function(response) {
+                        
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        
+                        console.log('Error:', error); 
+                    }
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab-1">Search DVD By Title</a></li>
+            <li><a href="#tab-2">Get All DVDs</a></li>
+        </ul>
+        <div id="tab-1">
+            <form>
+                Enter DVD Title: <input type="text" id="dvdTitle"><br><br>
+                <input type="submit" value="Search DVD" id="searchByTitle">
+            </form>
+        </div>
+        <div id="tab-2">
+            <button id="getAllDVDs">Get All DVDs</button>
+        </div>
+    </div>
+</body>
+</html>
